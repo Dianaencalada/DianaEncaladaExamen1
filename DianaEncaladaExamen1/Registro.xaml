@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DianaEncaladaExamen1.Registro">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label x:Name="LblUser" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="0"></Label>
+                <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0" >
+                    <Label Text="Registro" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                </Frame>
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*">
+                        </RowDefinition>
+                        <RowDefinition Height="*">
+                        </RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*">
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="*">
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="LblNombre" Text="Nombre" Grid.Row="0" Grid.Column="0"></Label>
+                    <Entry x:Name="TxtNombre" Keyboard="Text" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start"></Entry>
+                    <Label x:Name="LblMontoInicial" Text="Monto Inicial" Grid.Row="1" Grid.Column="0"></Label>
+                    <Entry x:Name="TxtMontoInicial" Placeholder="0.00" Keyboard="Numeric" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center"></Entry>
+
+                </Grid>
+                <Button x:Name="BtnCalcular" Text="Calcular" Grid.Row="2" Grid.Column="0" FontSize="Title" Clicked="BtnCalcular_Clicked"></Button>
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*">
+                        </RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*">
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="*">
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="LblPagoMensual" Text="Pago Mensual" Grid.Row="0" Grid.Column="0" FontSize="20"></Label>
+                    <Entry x:Name="TxtPagoMensual" Keyboard="Numeric" Placeholder="0.00" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" IsReadOnly="True" ></Entry>
+
+                </Grid>
+                <Button x:Name="BtnGuardar" Text="Guardar" Grid.Row="2" Grid.Column="0" FontSize="Title" Clicked="BtnGuardar_Clicked"></Button>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
